@@ -1,0 +1,109 @@
+Assignment - 3
+
+Q.1.Write a program that demonstrates widening conversion from int to double and prints the result
+----------------------------------------------------------------------------------------------------------
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+        double result = number;
+
+        System.out.println("The integer number is " + number);
+        System.out.println("Widening conversion to double is " + result);
+}
+
+-----------------------------------------------------------------------------------------------------------
+
+
+
+Q.2.Create a program that demonstrates narrowing conversion from double to int and prints the result.
+-----------------------------------------------------------------------------------------------------------
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double number = sc.nextDouble();
+        int result = (int)number;
+
+        System.out.println("The double number is " + number);
+        System.out.println("Narrowing conversion to integer is " + result);
+    }
+}
+
+------------------------------------------------------------------------------------------------------------
+
+
+
+Q.3.Write a program that performs arithmetic operations involving different data types (int, double, float)
+and observes how Java handles widening conversions automatically.
+-------------------------------------------------------------------------------------------------------------
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.function.BooleanSupplier;
+
+public class Main {
+    public static void main(String[] args) {
+        int intNumber = 5;
+        double doubleNumber = 8.99;
+        float floatNumber = 1.66f;
+        char character = 't';
+
+//        int answer = intNumber + doubleNumber; //wont work
+        int doubleInInt = (int) (intNumber + doubleNumber);
+        System.out.println(doubleInInt);
+
+        int floatToInt = (int) floatNumber;
+        System.out.println(floatToInt);
+
+        char floatToChar = (char) floatNumber;
+        System.out.println(floatToChar);
+
+        double intToDouble = intNumber;
+        System.out.println(intToDouble);
+
+        double floatToDouble = floatNumber;
+        System.out.println(floatToDouble);
+
+        float intToFloat = intNumber;
+        System.out.println(intToFloat);
+
+        float doubleToFloat = (float) doubleNumber;
+        System.out.println(doubleToFloat);
+
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------
+
+
+
+Q.4.Write a Program that demonstrates widening conversion from int to (double,float, boolean, string) and
+prints the result.
+------------------------------------------------------------------------------------------------------------
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.function.BooleanSupplier;
+
+public class Main {
+    public static void main(String[] args) {
+        int number = 15;
+        double number1 = number;
+        float number2 = number;
+        boolean flag;
+        if(number >= 1){
+            flag = true;
+        }else
+            flag = false;
+        String temp = String.valueOf(number);
+
+        System.out.println("Translated Double number is " + number1);
+        System.out.println("Translated Float number is " + number2);
+        System.out.println("Translated Boolean flag is " + flag);
+        System.out.println("Translated String is " + temp);
+    }
+}
