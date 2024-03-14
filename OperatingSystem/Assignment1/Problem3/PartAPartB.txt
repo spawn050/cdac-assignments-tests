@@ -1,0 +1,5 @@
+Part-A
+
+1.echo "Hello, World!"
+    Will print Hello, World! on the screen
+2.name=
