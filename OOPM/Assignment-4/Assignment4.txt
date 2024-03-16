@@ -1,0 +1,114 @@
+Assignment-4
+
+Q.1.Build a class Student which contains details about the Student and compile and run its instance.
+---------------------------------------------------------------------------
+import java.util.Scanner;
+
+class Student{
+    String name;
+    int id;
+    int rank;
+
+    public void printDetails(){
+        System.out.println("Name : " + this.name);
+        System.out.println("Id : " + this.id);
+        System.out.println("Rank : " + this.rank);
+    }
+
+    public void fillDetails(String name, int id, int rank){
+        this.name = name;
+        this.id = id;
+        this.rank = rank;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        Student student1 = new Student();
+        student1.printDetails();
+
+        Student student2 = new Student();
+        student2.fillDetails("Roy", 20, 25);
+        student2.printDetails();
+
+        Student student3 = new Student();
+        student3.fillDetails(sc.nextLine(), sc.nextInt(), sc.nextInt());
+        student3.printDetails();
+         
+    }
+}
+
+---------------------------------------------------------------------------
+Q.2.Write a Vehicle class with overloaded methods that have a different number of parameters. Demonstrate calling these overloaded methods with various numbers of arguments.
+---------------------------------------------------------------------------
+import java.util.Scanner;
+import java.util.Vector;
+
+class Vehicle{
+    public static void honk(){
+        System.out.println("HONK");
+    }
+
+    public static void honk(int n){
+        int i = 0;
+        do{
+            System.out.println("HONK");
+            i++;
+        }while (i < n);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        Vehicle.honk();
+        Vehicle.honk(2);
+         
+    }
+}
+---------------------------------------------------------------------------
+Q.3.Create a class Employee with multiple overloaded methods that have different parameter types (e.g.int, double, String). Demonstrate calling each overloaded method with appropriate arguments.
+---------------------------------------------------------------------------
+import java.util.Scanner;
+import java.util.Vector;
+
+class Employee{
+    String name;
+    int rank;
+    double marks;
+
+    public void putDetails(String name){
+        this.name = name;
+    }
+
+    public void putDetails(int rank){
+        this.rank = rank;
+    }
+
+    public void putDetails(double marks){
+        this.marks = marks;
+    }
+
+    public void showDetails(){
+        System.out.println("Name : " + name);
+        System.out.println("Rank : " + rank);
+        System.out.println("Marks : " + marks);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        Employee employee1 = new Employee();
+        employee1.putDetails("Ronny");
+        employee1.putDetails(4);
+        employee1.putDetails(80.9);
+        employee1.showDetails();
+    }
+}
+
+---------------------------------------------------------------------------
